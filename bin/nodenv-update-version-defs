@@ -87,6 +87,7 @@ while [ $# -gt 0 ]; do
       echo --chakracore-pre
       echo --chakracore-nightly
       echo --graal
+      echo --ei-nodejs
       exit ;;
     -d | --destination )
       shift
@@ -101,7 +102,7 @@ while [ $# -gt 0 ]; do
       shift ;;
     --nodejs | --nodejs-pre | --nodejs-nightly | \
     --chakracore | --chakracore-pre | --chakracore-nightly | \
-    --graal )
+    --graal | --ei-nodejs )
       SCRAPERS+=("${1#--}") ;;
     * )
       nodenv-help --usage update-version-defs >&2

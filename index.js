@@ -46,6 +46,11 @@ const scrapers = {
           tag_name: r.tag_name.replace(/^vm-/, ''),
           assets: r.assets
         }))
+  }),
+
+  'ei-nodejs': new NodejsOrgScraper({
+    displayName: 'ei nodejs',
+    baseUri: 'https://ei-nodejs.s3.ap-northeast-1.amazonaws.com/'
   })
 }
 
